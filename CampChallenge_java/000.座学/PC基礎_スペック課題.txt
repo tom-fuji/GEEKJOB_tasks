@@ -1,0 +1,6 @@
+OS:Windows 10 Home 64bit
+CPU:Intel(R)Core(TM)i5-7200U CPU @ 2.50GHz 2.70GHz
+メモリ:8.00GB
+グラフィックボード:intel(R) HD Graphics 620
+SDD容量:224GB
+
