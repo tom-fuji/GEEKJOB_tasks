@@ -8,9 +8,9 @@ String syubetu = request.getParameter("param3");
 
 if(syubetu.equals("1")){
   out.println("１：雑貨");
-}else if(syubetu == "2"){
+}else if(syubetu.equals("2")){
     out.println("２：生鮮食品");
-}else if(syubetu == "3"){
+}else if(syubetu.equals("3")){
     out.println("３：その他");
 }
 
