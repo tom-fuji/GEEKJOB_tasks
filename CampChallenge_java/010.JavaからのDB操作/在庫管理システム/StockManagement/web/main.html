@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>メインページ　在庫管理システム</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>在庫管理システムへようこそ</div>
+        <br>
+        こちらは書籍商品在庫管理システムのメインメニューです。
+        <br>
+        下記のボタンから登録データの一覧の取得や新たな書籍商品の登録ができます。
+        <br>
+        <br>
+        <form action="StockManage_Controll" method="post">
+            
+        <button type="submit" name="pageid" value="3">
+            登録されている書籍データ一覧を表示</button>
+        <br>
+        <button type="submit" name="pageid" value="2">
+            書籍情報をデータに登録する</button>
+        <br>
+        <br>
+         <button type="submit" name="pageid" value="5">
+            ログアウト</button>
+        </form>
+        
+        
+    </body>
+</html>
