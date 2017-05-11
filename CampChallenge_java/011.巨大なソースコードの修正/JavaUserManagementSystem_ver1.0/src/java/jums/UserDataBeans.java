@@ -23,6 +23,15 @@ public class UserDataBeans implements Serializable{
     private String tell;
     private String comment;
     
+    UserDataBeans(){
+        this.name = "";
+        this.year = "";
+        this.month = "";
+        this.day =  "";
+        this.type = "";
+        this.tell = "";
+        this.comment = "";
+    }
     
     public String getName(){
         return name;

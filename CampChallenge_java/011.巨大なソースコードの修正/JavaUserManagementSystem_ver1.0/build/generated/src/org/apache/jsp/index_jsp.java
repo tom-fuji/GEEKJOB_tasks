@@ -56,13 +56,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <a href=\"\" >検索(修正・削除)</a><br>\n");
       out.write("    \n");
       out.write("    ");
-//セッション削除の処理
-     if(session.getAttribute("UDB") != null && session.getAttribute("url").equals("insertresult")){
+//タスク7　セッションの破棄
+      //セッション削除の処理 もし直前のページが登録完了ページなら
+        //入力データが格納されているセッションデータを削除
+     if(session.getAttribute("UDB") != null && session.getAttribute("url")
+             .equals("/JavaUserManagementSystem_ver1.0/insertresult")){
         
            session.removeAttribute("UDB");    
      }
-     
-     
       out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
