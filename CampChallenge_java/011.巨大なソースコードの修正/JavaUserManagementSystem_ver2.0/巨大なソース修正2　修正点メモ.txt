@@ -1,0 +1,35 @@
+巨大なソース修正2　問題と改良点まとめ
+
+〇Search画面
+　1.部分文字検索だとNull Null /SearchResult→UserDAOのSearchメソッドの改良
+　2.複合検索できてない→UserDAOのSearchメソッドの改良
+　3.Getで日本語渡したときに文字化けして検索されない
+　　→TomCatのServer.xmlのConectorにuseBodyEncodingForURI="true"を追加
+
+〇SearchResult画面
+　4.検索結果が一個だけしかでない→UserDAOのseachメソッドの結果をArrayList化
+
+〇ResultDetail画面
+　5.すべてResultDetail?id=2で取得した詳細画面になってしまう。
+　→ResultDetail.javaのGetParameterを正しく変更
+　6.URLの部分の?id=の部分を書き換えるとそこから自由にデータを取得できてしまう
+　（セキュリティ的に問題）
+　→searchresultの画面でリンクを<a href = "ResultDetail?id=~">でなく
+　　<form action="ResultDetail" method="post"> 
+　　<a href ="#" onclick～～>
+　　<input type="hidden" ～> 
+　　のような記述でpostでid値を渡して詳細画面を表示させるように変更
+
+〇Delete画面
+　7.UserDAOにdeleteUDメソッドを作成して実装
+
+〇Update画面
+　8.UserDAOにupdateUDメソッドを作成して実装
+
+全体としては不正アクセスを防止するためにアクセスチェックと
+トップ画面へのリンクなど追加
+あとはdeleteresultの画面でセッション削除の機能を実装
+
+
+
+
